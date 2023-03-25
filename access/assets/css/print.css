@@ -1,0 +1,10 @@
+@page {
+  /* size: A4 !important; */
+  margin: 0 !important;
+}
+#print-btn,
+.navbar {
+  display: none;
+  visibility: none;
+}
+
