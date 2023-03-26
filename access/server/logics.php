@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
             unlink("../uploads/" . $image);
          }
          flashMsg("message", "Package deleted");
-         redirect("index.php" . $page);
+         redirect("index.php");
       }
    }
    if (isset($_POST['btn-update-product'])) {
@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
          echo "Something went wrong";
       } else {
          flashMsg("message", "Package updated");
-         redirect("index.php" . $page);
+         redirect("index.php");
       }
    }
    if (isset($_POST['btn_generate_tracking_no'])) {
@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
       $stmt->bind_param("ss",  $rand_number3, $pack_id);
 
       if ($stmt->execute()) {
-         redirect("index.php" . $page);
+         redirect("index.php");
          flashMsg("message", "New Tracking number generated successfully");
       } else {
          die ("Something went wrong");
@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
          //  Save uploaded images to img folder
          move_uploaded_file($_FILES['image']['tmp_name'], $image_path . $image_name2);
          flashMsg("message", "Image updated");
-         redirect("index.php" . $page);
+         redirect("index.php");
          if (file_exists($image_path . $getImage)) {
             unlink($image_path . $getImage);
          }
