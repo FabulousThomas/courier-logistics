@@ -35,6 +35,4 @@ $row = mysqli_fetch_assoc($getRoutes);
 
 </main>
 
-<?php
-require './inc/footer.php';
-?>
+<?php require './inc/footer.php'; ?>
