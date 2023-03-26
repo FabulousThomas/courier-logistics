@@ -132,23 +132,22 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
       global $conn;
       $pack_id = mysqli_real_escape_string($conn, $_POST['pack_id']);
 
-      $rand_number3 = random_num(15, 9000000000);
+      $rand_number3 = rand(1000000000, 9999999999);
 
       $stmt = $conn->prepare("UPDATE products SET t_id=? WHERE p_id=? LIMIT 1");
-      $stmt->bind_param("ss",  $rand_number3, $pack_id);
+      $stmt->bind_param("si",  $rand_number3, $pack_id);
 
       if ($stmt->execute()) {
          redirect("index.php");
          flashMsg("message", "New Tracking number generated successfully");
       } else {
-         die ("Something went wrong");
+         die("Something went wrong");
       }
    }
    if (isset($_POST['btn-change-image'])) {
 
       global $conn;
       $image_id = mysqli_real_escape_string($conn, $_POST['image_id']);
-      // $image =  $_FILES['image'];
 
       // GET IMAGE PATH EXTENSION AND NAME
       $rand_number2 = random_num(1000000000, 9999999999);
