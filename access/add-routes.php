@@ -23,7 +23,7 @@ if (isset($_GET['p_id'])) {
          echo "Something went wrong";
       } else {
          flashMsg("message", "Package Route updated successfully");
-         redirect("index.php" . $page);
+         redirect("index.php");
       }
    }
 } else {
