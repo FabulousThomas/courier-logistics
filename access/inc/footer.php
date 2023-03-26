@@ -5,7 +5,6 @@
 <script src="./assets/js/bootstrap-5.2.3.bundle.min.js"></script>
 <script src="./assets/js/script.js"></script>
 
-
 </body>
 
 </html>
