@@ -11,7 +11,6 @@ if (isset($_POST['btn-get-receipt'])) {
 ?>
 
 <style>
-
    small {
       display: block;
    }
