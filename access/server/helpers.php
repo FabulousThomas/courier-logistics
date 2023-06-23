@@ -25,9 +25,15 @@ function flashmsg($name = '', $message = '', $class = 'alert alert-success')
 }
 
 // RANDOM min FUNCTION
-function random_num($min, $max)
+function random_num($length)
 {
-   return rand($min, $max);
+   $text = "";
+   $len = rand($length, $length);
+
+   for ($i = 0; $i < $len; $i++) {
+      $text .= rand(2, 9);
+   }
+   return $text;
 }
 
 // PAGE REDIRECT
