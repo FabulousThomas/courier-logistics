@@ -8,7 +8,8 @@
                <span aria-hidden="true"><i class="las la-times la-2x" aria-hidden="true"></i></span>
             </a>
          </div>
-         <p class="text-center text-uppercase mb-0 text-danger">Fill in the fields carefully. Remember to read through before submitting form.</p>
+         <p class="text-center text-uppercase mb-0 text-danger">Fill in the fields carefully. Remember to read through
+            before submitting form.</p>
          <div class="modal-body">
             <form method="POST" enctype="multipart/form-data">
                <input type="hidden" value="">
@@ -176,10 +177,13 @@
                </div>
 
                <div class="modal-footer py-2">
-                  <button type="submit" class="btn btn-secondary px-5 py-2 btn-sm" name="btn-add-product"><i class="las la-plus"></i> Add</button>
+                  <button type="submit" class="btn btn-secondary px-5 py-2 btn-sm" name="btn-add-product"><i
+                        class="las la-plus"></i> Add</button>
                </div>
-               <p class="text-danger text-center text-uppercase mb-0">Add traveling routes after package registration</p>
-               <p class="text-danger text-center text-uppercase">Note that form will not be submitted without uploading image</p>
+               <p class="text-danger text-center text-uppercase mb-0">Add traveling routes after package registration
+               </p>
+               <p class="text-danger text-center text-uppercase">Note that form will not be submitted without uploading
+                  image</p>
             </form>
 
          </div>
@@ -339,12 +343,14 @@
                <div class="form-group mb-0 mb-lg-2 row">
                   <div class="col-md-6 mb-3 mb-lg-0">
                      <label for="">Order Date</label>
-                     <input type="date" name="order_date" id="order_date" value="<?= date('Y-m-d'); ?>" class="form-control" required>
+                     <input type="date" name="order_date" id="order_date" value="<?= date('Y-m-d'); ?>"
+                        class="form-control" required>
                   </div>
 
                   <div class="col-md-6 mb-3 mb-lg-0">
                      <label for="">Arival Date <small class="text-danger">(select date)</small></label>
-                     <input type="date" name="arival_date" id="arival_date" value="<?= date('Y-m-d'); ?>" class="form-control" required>
+                     <input type="date" name="arival_date" id="arival_date" value="<?= date('Y-m-d'); ?>"
+                        class="form-control" required>
                   </div>
                </div>
 
@@ -366,7 +372,8 @@
                </div> -->
 
                <div class="modal-footer py-2">
-                  <button type="submit" class="btn btn-secondary px-5 py-2 btn-sm" name="btn-update-product"><i class="las la-plus"></i> Update</button>
+                  <button type="submit" class="btn btn-secondary px-5 py-2 btn-sm" name="btn-update-product"><i
+                        class="las la-plus"></i> Update</button>
                </div>
 
             </form>
@@ -415,7 +422,7 @@
          <div class="modal-body">
             <p class="m-0">Note: <span class="text-danger">This action can not be reversed once it is done.</span> </p>
             Do you confirm to generate new tracking number?
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form method="POST">
                <input type="hidden" name="pack_id" id="pack_id" class="form-control" value="">
                <div class="modal-footer mt-4">
 
@@ -472,14 +479,17 @@
 
                <div class="form-group mb-2">
                   <label for="password" class="m-0">Password</label>
-                  <input type="password" id="account-password" class="form-control" name="password" placeholder="Password" required>
+                  <input type="password" id="account-password" class="form-control" name="password"
+                     placeholder="Password" required>
                </div>
                <div class="form-group mb-2">
                   <label for="cpassword" class="m-0">Confirm Password</label>
-                  <input type="password" id="account-cpassword" class="form-control" name="cpassword" placeholder="Confirm Password" required>
+                  <input type="password" id="account-cpassword" class="form-control" name="cpassword"
+                     placeholder="Confirm Password" required>
                </div>
                <div class="form-group">
-                  <input type="submit" id="btn" class="btn btn-secondary w-100" name="btn-change-password" value="Change">
+                  <input type="submit" id="btn" class="btn btn-secondary w-100" name="btn-change-password"
+                     value="Change">
                </div>
             </form>
          </div>
