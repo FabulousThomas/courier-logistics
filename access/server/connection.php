@@ -14,8 +14,8 @@ if ($createdb) {
    // CREATE TABLE
    $createProducts = $conn->query("CREATE TABLE IF NOT EXISTS products ( 
       `id` INT NOT NULL AUTO_INCREMENT,
-      `p_id` INT NOT NULL, 
-      `t_id` INT NOT NULL, 
+      `p_id` VARCHAR(20) NOT NULL, 
+      `t_id` VARCHAR(20) NOT NULL, 
       `r_name` VARCHAR(225) NOT NULL, 
       `r_email` VARCHAR(225) NOT NULL, 
       `r_phone` VARCHAR(225) NOT NULL,
