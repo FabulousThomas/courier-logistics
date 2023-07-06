@@ -24,7 +24,7 @@ function flashmsg($name = '', $message = '', $class = 'alert alert-success')
    }
 }
 
-// RANDOM min FUNCTION
+// RANDOM NUMBER
 function random_num($length)
 {
    $text = "";
