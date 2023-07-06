@@ -28,7 +28,8 @@ require './inc/navbar.php';
         <div class="container">
             <div class="row m-0 text-dark align-items-center">
                 <p class="m-0">Shoot us a mail</p>
-                <div class="col-lg-5 col-md-6 black-color mb-3">
+                <div class="col-lg-5 col-md-6 black-color mb-3 d-flex align-items-center">
+                    <span class="las la-envelope la-3x theme-color"></span>
                     <h5><a href="mailto:Support@maxexpresservice.com" class="text-dark">Support@maxexpresservice.com</a></h5>
                 </div>
                 <div class="col-lg-4 col-md-6 black-color mb-3 d-flex align-items-center">
@@ -125,15 +126,15 @@ require './inc/navbar.php';
         </div>
     </section>
 
-    <section class="testimony-bg pb-5 mb-5 d-flex align-items-center">
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-lg-8 col-md-12">
+    <section class="testimony-bg py-5 mb-5 d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-12">
                     <h6 class="theme-color">Clients Testimonials</h6>
                     <h1 class="pt-3 pb-2 text-white">What Our Clients Say!</h1>
 
-                    <div class="container mb-3">
-                        <div class="col-lg-6 col-md-12 slider-wrapper">
+                    <div class="container">
+                        <div class=" slider-wrapper">
                             <div class="testimony">
                                 <p class="text-white-50">They're best at what they do. Keep propelling y'all.</p>
                                 <div class="d-flex align-items-center">
@@ -157,7 +158,7 @@ require './inc/navbar.php';
                             </div>
                         </div>
 
-                        <div class="col-lg-4  d-none d-lg-flex justify-content-between align-items-center">
+                        <div class="col-lg-5 d-none d-lg-flex justify-content-between align-items-center">
                             <i class="la-1x p-2 las la-angle-left prev"></i>
                             <i class="la-1x p-2 las la-angle-right next"></i>
                         </div>
@@ -165,7 +166,7 @@ require './inc/navbar.php';
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-12">
                     <div class="card text-left">
                         <img class="card-img-top" src="holder.js/100px180/" alt="">
                         <div class="card-body">
@@ -177,7 +178,7 @@ require './inc/navbar.php';
         </div>
     </section>
 
-    <section class="mt-5 py-5 photo-credit" id="">
+    <section class="mt- py-5 photo-credit" id="">
         <div class="container text-center">
             <h6 class="theme-color">Photo Credits</h6>
             <h1 class="text-uppercase">Our Utilities</h1>
