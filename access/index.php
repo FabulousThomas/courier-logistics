@@ -38,8 +38,8 @@ if (isset($_POST['btn-change-password'])) {
       <p class="text-center">You can manage package from here.</p>
       <div class="col-12">
          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-               <thead class="text-bg-dark">
+            <table class="table table-hover table-bordered pt-2">
+               <thead class="text-white bg-dark">
                   <tr>
                      <th scope="col">#</th>
                      <th scope="col">Receiver Name</th>
