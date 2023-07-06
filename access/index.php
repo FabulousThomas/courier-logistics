@@ -39,7 +39,7 @@ if (isset($_POST['btn-change-password'])) {
       <div class="col-12">
          <div class="table-responsive">
             <table class="table table-hover table-bordered">
-               <thead>
+               <thead class="text-bg-dark">
                   <tr>
                      <th scope="col">#</th>
                      <th scope="col">Receiver Name</th>
@@ -52,6 +52,25 @@ if (isset($_POST['btn-change-password'])) {
                      <th scope="col">Delivery Status</th>
                      <th scope="col">Photo (Change)</th>
                      <th scope="col">Action</th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
+                     <th hidden></th>
                   </tr>
                </thead>
                <tbody>
