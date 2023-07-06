@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 global $conn;
 require  'access/server/config.php';
