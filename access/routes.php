@@ -1,6 +1,7 @@
 <?php
 require './inc/head.php';
 require './inc/navbar.php';
+require './inc/sidebar.php';
 $i = 1;
 
 $getRoutes = selectAll('products');
