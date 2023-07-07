@@ -10,10 +10,15 @@ if (!isset($_SESSION['isLoggedIn'])) {
      <a href="./">
        <img src="./assets/img/logo/logo.png" width="100px" alt="LOGO">
      </a>
-     <button class="navbar-toggler d-lg-none d-inline theme-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+     <!-- <button class="navbar-toggler d-lg-none d-inline theme-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon theme-color"></span>
+     </button> -->
+
+     <button class="navbar-toggler d-lg-none d-inline theme-color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon theme-color"></span>
      </button>
-     <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+     <div class="collapse navbar-collapse d-sm-none" id="collapsibleNavId">
        <!-- <div class="m-auto"></div> -->
        <ul class="navbar-nav ms-">
          <li class="nav-item">
