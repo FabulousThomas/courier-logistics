@@ -1,6 +1,7 @@
 <?php
 require './inc/head.php';
 require './inc/navbar.php';
+require './inc/sidebar.php';
 $i = 1;
 
 $getRoutes = selectAll('products');
@@ -27,7 +28,7 @@ $row = mysqli_fetch_assoc($getRoutes);
                </select>
             </div>
             <div class="form-group mb-3">
-               <button type="submit" name="btn-get-receipt" class="btn btn-secondary">Proceed to edit</button>
+               <button type="submit" name="btn-get-receipt" class="btn btn-secondary">Proceed to Print</button>
             </div>
          </form>
       </div>
