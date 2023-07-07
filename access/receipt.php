@@ -1,6 +1,7 @@
 <?php
 require './inc/head.php';
 require './inc/navbar.php';
+require './inc/sidebar.php';
 
 if (isset($_POST['btn-get-receipt'])) {
    $p_id = $_POST['p_id'];
