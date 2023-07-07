@@ -126,7 +126,7 @@ if (isset($_POST['btn-change-password'])) {
 
                                     <a class="text-white btn btn-sm bg-warning rounded-0 dropdown-item generate_tracking_no">Regenerate Tracking ID</a>
 
-                                    <form action="receipt.php" method="POST">
+                                    <form action="view.php" method="POST">
                                     <button class="text-white btn btn-sm bg-info rounded-0 dropdown-item view-package" type="submit">View Package</button>
                                     </form>
 
