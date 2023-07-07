@@ -1,6 +1,7 @@
 <?php
 require './inc/head.php';
 require './inc/navbar.php';
+require './inc/sidebar.php';
 
 if (isset($_GET['p_id'])) {
 
