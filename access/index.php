@@ -1,6 +1,7 @@
 <?php
 require './inc/head.php';
 require './inc/navbar.php';
+require './inc/sidebar.php';
 
 if (isset($_POST['btn-change-password'])) {
    $password = $_POST['password'];
@@ -125,7 +126,9 @@ if (isset($_POST['btn-change-password'])) {
 
                                     <a class="text-white btn btn-sm bg-warning rounded-0 dropdown-item generate_tracking_no">Regenerate Tracking ID</a>
 
-                                    <a class="text-white btn btn-sm bg-info rounded-0 dropdown-item view-package" href="receipt.php">View Package</a>
+                                    <form action="receipt.php" method="POST">
+                                    <button class="text-white btn btn-sm bg-info rounded-0 dropdown-item view-package" type="submit">View Package</button>
+                                    </form>
 
                                     <a class="text-white btn btn-sm bg-primary rounded-0 dropdown-item edit-package" type="button">Edit Package</a>
 
