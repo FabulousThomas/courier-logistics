@@ -23,7 +23,7 @@ if (isset($_POST['btn-login'])) {
             $_SESSION['user_email'] = $user_email;
             $_SESSION['isLoggedIn'] = true;
             flashMsg('message', 'Welcome ' . '-' . 'Admin' . '-');
-            redirect('index.php');
+            redirect('access/index.php');
         } else {
             flashMsg('error', 'Could not verify your account. Check your details', 'alert alert-danger');
         }
