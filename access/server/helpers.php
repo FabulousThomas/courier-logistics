@@ -39,5 +39,11 @@ function random_num($length)
 // PAGE REDIRECT
 function redirect($page)
 {
-   header('Location: ' . $page);
+   // header('Location: ' . URLROOT . '/' . $page);
+
+   echo "
+      <script>
+         window.location.href='" . URLROOT . "/" . $page . "';
+      </script>
+   ";
 }
