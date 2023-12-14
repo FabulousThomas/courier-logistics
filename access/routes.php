@@ -14,7 +14,7 @@ $row = mysqli_fetch_assoc($getRoutes);
       <h2 class="text-center mb-0">Manage Routes</h2>
       <p class="text-center">Route gives you the privilege to manage locations of transit of this product.</p>
       <div class="col-lg-8 col-md-12 mx-auto">
-         <p>Choose product to manage routes</p>
+         <p>Choose package to manage routes</p>
          <form action="add-routes.php?p_id=<?= $row['p_id'] ?>" method="GET">
             <div class="form-group mb-3">
                <select class="form-select form-control" name="p_id">
