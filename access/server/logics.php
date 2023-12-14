@@ -21,8 +21,8 @@ function deletePackage($table, $table_col, $search_param)
 // === FORM REQUEST
 if ($_SERVER['REQUEST_METHOD'] = 'POST') {
    if (isset($_POST['btn-add-product'])) {
-      $rand_pid = "ID" . random_num(6);
-      $rand_tid = "TR" . random_num(8);
+      $rand_pid = "ID" . random_int(111111, 999999);
+      $rand_tid = "TR" . random_int(11111111, 99999999);
       $transit = 'Not set yet';
       $r_status = 'Not set yet';
       $auto_track = 'No';
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
       $image = $_FILES['image'];
 
       // GET IMAGE PATH EXTENSION AND NAME
-      $rand_number1 = random_num(7);
+      $rand_number1 = random_int(1111111, 9999999);
       $image1 = $_FILES['image']['name'];
       $image_ext1 = pathinfo($image1, PATHINFO_EXTENSION);
       $image_name1 = $rand_number1 . '.' . $image_ext1;
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
          //  Save uploaded images to img folder
          move_uploaded_file($_FILES['image']['tmp_name'], $image_path . $image_name1);
          flashMsg('message', 'Package added successfully!');
-         redirect('index.php');
+         redirect('access/index.php');
       } else {
          echo "Something went wrong";
       }
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
             unlink("../uploads/" . $image);
          }
          flashMsg("message", "Package deleted");
-         redirect("index.php");
+         redirect("access/index.php");
       }
    }
    if (isset($_POST['btn-update-product'])) {
@@ -123,20 +123,20 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
          echo "Something went wrong";
       } else {
          flashMsg("message", "Package updated");
-         redirect("index.php");
+         redirect("access/index.php");
       }
    }
    if (isset($_POST['btn_generate_tracking_no'])) {
 
       global $conn;
-      $generate_tracking = "TR" . random_num(8);
+      $generate_tracking = "TR" . random_int(11111111, 99999999);
       $pack_id = mysqli_real_escape_string($conn, $_POST['pack_id']);
 
       $stmt = $conn->prepare("UPDATE products SET t_id=? WHERE p_id=? LIMIT 1");
       $stmt->bind_param("si", $generate_tracking, $pack_id);
 
       if ($stmt->execute()) {
-         redirect("index.php");
+         redirect("access/index.php");
          flashMsg("message", "New Tracking number generated successfully");
       } else {
          die("Something went wrong");
@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
       $image_id = mysqli_real_escape_string($conn, $_POST['image_id']);
 
       // GET IMAGE PATH EXTENSION AND NAME
-      $rand_number2 = random_num(7);
+      $rand_number2 = random_int(1111111, 9999999);
 
       $image2 = $_FILES['image']['name'];
       $image_ext2 = pathinfo($image2, PATHINFO_EXTENSION);
@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
          //  Save uploaded images to img folder
          move_uploaded_file($_FILES['image']['tmp_name'], $image_path . $image_name2);
          flashMsg("message", "Image updated");
-         redirect("index.php");
+         redirect("access/index.php");
          if (file_exists($image_path . $getImage)) {
             unlink($image_path . $getImage);
          }
