@@ -10,7 +10,7 @@ if (isset($_GET['p_id'])) {
    $row = mysqli_fetch_assoc($sql);
 
    if ($row['p_id'] != $p_id || $p_id == '') {
-      redirect('routes.php');
+      redirect('access/routes.php');
    }
 
    if (isset($_POST['add_routing'])) {
@@ -24,11 +24,11 @@ if (isset($_GET['p_id'])) {
          echo "Something went wrong";
       } else {
          flashMsg("message", "Package Route updated successfully");
-         redirect("index.php");
+         redirect("access/");
       }
    }
 } else {
-   redirect('routes.php');
+   redirect('access/routes.php');
 }
 ?>
 
