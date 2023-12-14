@@ -3,14 +3,14 @@
       <div class="row m-0">
          <div class=" mb-4">
             <h2 class="text-white">We Understand The Importance Approaching Each Work!</h2>
-            <a href="mailto:Support@maxexpresservice.com">Support@maxexpresservice.com </a>
+            <a href="mailto:<?= EMAIL?>"><?= EMAIL?> </a>
          </div>
          <hr>
          <div class="col-lg-4 col-md-6 mb-4">
             <div class="footer-tittle">
                <h4 class="text-white">COMPANY</h4>
                <ul class="footer-nav">
-                  <a href="mailto:Support@maxexpresservice.com"></a>
+                  <a href="mailto:<?= EMAIL?>"></a>
                   <li class="nav-item"><a class="nav-link text-white-50" href="#about">About Us</a></li>
                   <li class="nav-item"><a class="nav-link text-white-50" href="#company">Company</a></li>
                </ul>
@@ -54,7 +54,7 @@
                   <small>
                      Copyright &copy; <script>
                         document.write(new Date().getFullYear());
-                     </script> www.maxexpresservice.com
+                     </script> | All rights reserved
                   </small>
                </div>
             </div>
@@ -93,9 +93,9 @@
 
 
 
-<small style="font-size: .8rem;">Translate this page:</small>
-<div id="google_translate_element">
-</div>
+<!-- <small style="font-size: .8rem;">Translate this page:</small> -->
+<!-- <div id="google_translate_element">
+</div> -->
 
 <script type="text/javascript">
    function googleTranslateElementInit() {
@@ -107,7 +107,7 @@
 
 <script src="./assets/js/element.js"></script>
 
-<small style="font-size: .8rem;">You can translate the content of this page by selecting a language in the select box.</small>
+<!-- <small style="font-size: .8rem;">You can translate the content of this page by selecting a language in the select box.</small> -->
 
 </body>
 
