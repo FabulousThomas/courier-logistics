@@ -47,9 +47,9 @@ if (isset($_POST['btn-get-receipt'])) {
             <div class="d-flex justify-content-between mt-3">
                <div>
                   <small class="d-block fw-bold">Address: </small>
-                  <small class="d-block fw-bold">Email: Support@maxexpresservice.com</small>
-                  <small class="d-block fw-bold">Website: maxexpresservice.com</small>
-                  <small class="d-block fw-bold">Tel: </small>
+                  <small class="d-block fw-bold">Email: <?= EMAIL ?></small>
+                  <small class="d-block fw-bold">Website: <?= WEBSITE ?></small>
+                  <small class="d-block fw-bold">Tel: <?= PHONE ?></small>
                </div>
                <div>
                   <h3 class="text-uppercase text-success">invoice</h3>
