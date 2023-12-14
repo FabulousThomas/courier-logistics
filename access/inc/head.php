@@ -8,9 +8,15 @@ if (isset($_GET['logout'])) {
         unset($_SESSION['user_name']);
         unset($_SESSION['user_id']);
 
-        redirect('login.php');
+        redirect('access/login.php');
     }
 }
+
+
+// if (!isset($_SESSION['isLoggedIn'])) {
+//   redirect('login.php');
+// }
+
 
 ?>
 <!doctype html>
