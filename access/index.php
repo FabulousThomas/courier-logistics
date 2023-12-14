@@ -4,26 +4,28 @@ require './inc/navbar.php';
 require './inc/sidebar.php';
 
 if (isset($_POST['btn-change-password'])) {
-   $password = $_POST['password'];
+   $password = md5($_POST['password']);
    $cpassword = $_POST['cpassword'];
    $user_email = $_SESSION['user_email'];
 
-   if ($password !== $cpassword) {
-      flashMsg('message', 'Passwords do not match', 'alert alert-danger');
-      redirect('index.php?message');
-   } else if (strlen($password) < 6) {
+   // if ($password !== $cpassword) {
+   //    flashMsg('message', 'Passwords do not match', 'alert alert-danger');
+   //    redirect('access/index.php?message');
+   // }
+
+   if (strlen($password) < 6) {
       flashMsg('message', 'Passwords must be at least 6 characters', 'alert alert-danger');
-      redirect('index.php?message');
+      redirect('access/index.php?message');
    } else {
       $stmt = $conn->prepare("UPDATE users SET user_pass=? WHERE user_email = ?");
-      $stmt->bind_param('ss', md5($password), $user_email);
+      $stmt->bind_param('ss', $password, $user_email);
 
       if ($stmt->execute()) {
          flashMsg('message', 'Password updated successfully');
-         redirect('index.php?message');
+         redirect('access/index.php?message');
       } else {
          flashMsg('message', 'Could not update password', 'alert alert-danger');
-         redirect('index.php?message');
+         redirect('access/index.php?message');
       }
    }
 }
@@ -119,36 +121,35 @@ if (isset($_POST['btn-change-password'])) {
                            </td>
                            <td>
                               <div class="dropdown open"></div>
-                                 <a class="btn btn-light btn-sm dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown">
-                                    Action
-                                 </a>
-                                 <div class="dropdown-menu text-white shadow border-0 rounded-0" aria-labelledby="triggerId">
+                              <a class="btn btn-light btn-sm dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown">
+                                 Action
+                              </a>
+                              <div class="dropdown-menu text-white shadow border-0 rounded-0" aria-labelledby="triggerId">
 
-                                    <a class="text-white btn btn-sm bg-warning rounded-0 dropdown-item generate_tracking_no">Regenerate Tracking ID</a>
+                                 <!-- <a class="text-white btn btn-sm bg-warning rounded-0 dropdown-item generate_tracking_no">Regenerate Tracking ID</a> -->
 
-                                    <form action="view.php" method="POST">
-                                    <button class="text-white btn btn-sm bg-info rounded-0 dropdown-item view-package" type="submit">View Package</button>
-                                    </form>
+                                 <form action="view.php?t_id=<?= $row['t_id'] ?>" method="POST">
+                                    <button class="text-white btn btn-sm bg-info rounded-0 dropdown-item mb-1 view-package" name="btn_view_package" type="submit">View Package</button>
+                                 </form>
 
-                                    <a class="text-white btn btn-sm bg-primary rounded-0 dropdown-item edit-package" type="button">Edit Package</a>
+                                 <a class="text-white btn btn-sm bg-primary rounded-0 dropdown-item mb-1 edit-package" type="button">Edit Package</a>
 
-                                    <a class="text-white btn btn-sm bg-danger rounded-0 dropdown-item delete-package" type="button">Delete Package</a>
-                                 </div>
+                                 <a class="text-white btn btn-sm bg-danger rounded-0 dropdown-item delete-package" type="button">Delete Package</a>
                               </div>
-                           </td>
-                        </tr>
-                     <?php endforeach; ?>
-                  <?php else : ?>
-                     <tr>
-                        <td colspan="20" class="text-center">No Data Found</td>
-                     </tr>
-                  <?php endif; ?>
-               </tbody>
-            </table>
          </div>
+         </td>
+         </tr>
+      <?php endforeach; ?>
+   <?php else : ?>
+      <tr>
+         <td colspan="20" class="text-center">No Data Found</td>
+      </tr>
+   <?php endif; ?>
+   </tbody>
+   </table>
       </div>
+   </div>
    </div>
 </main>
 
 <?php require './inc/footer.php'; ?>
-
