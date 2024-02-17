@@ -1,0 +1,119 @@
+<?php
+require './inc/head.php';
+require './inc/navbar.php';
+require './inc/sidebar.php';
+$i = 1;
+
+$getRoutes = selectAll('products');
+$row = mysqli_fetch_assoc($getRoutes);
+
+if (isset($_GET['btn_view_package'])) {
+   $tracking_no = $_GET['t_id'];
+   $res = selectAllWhere('products', 't_id', $tracking_no);
+   $row = $res->fetch_assoc();
+} else {
+   // redirect("access");
+}
+?>
+
+<main class="py-5">
+
+   <div class="container">
+      <h2 class="text-center mb-0">See Package Information Below.</h2>
+      <div class="row mt-3">
+
+         <div class="col-lg-10 col-md-12 mb-4 mx-auto">
+            <div class="card py-">
+               <div class="card-body">
+                  <div class="d-lg-flex flex-lg-row row  justify-content-between">
+                     <div class="col-md-6 border-bottom pb-2">
+                        <small class="d-block">Package ID: <span class="fw-bold">
+                              <?= $row['p_id'] ?>
+                           </span></small>
+                        <small class="d-block">Tracking Number: <span class="fw-bold">
+                              <?= $row['t_id'] ?>
+                           </span></small>
+                        <small class="d-block">Handled by: <span class="fw-bold">
+                              <?= SITENAME ?>
+                           </span></small>
+                     </div>
+
+                     <div class="col-md-6 border-bottom pb-2">
+                        <small class="d-block">Package Status: <span class="fw-bold">
+                              <?= $row['p_status'] ?>
+                           </span></small>
+                        <small class="d-block">Order Date: <span class="fw-bold">
+                              <?= $row['order_date'] ?>
+                           </span></small>
+                        <small class="d-block">Arival Date: <span class="fw-bold">
+                              <?= $row['arival_date'] ?>
+                           </span>
+                           <?php if (isset($row['p_status'])) : ?>
+                              <?php if ($row['p_status'] != 'Delivered') : ?>
+                                 <sup class="text-danger">(subject to change)</sup>
+                              <?php endif; ?>
+                           <?php endif; ?>
+                        </small>
+                     </div>
+                  </div>
+
+                  <div class="d-lg-flex flex-lg-row row  justify-content-between">
+                     <div class="col-md-6 border-bottom py-2">
+                        <small class="d-block">Receiver Name: <span class="fw-bold">
+                              <?= $row['r_name'] ?>
+                           </span></small>
+                        <small class="d-block">Receiver Phone: <span class="fw-bold">
+                              <?= $row['r_phone'] ?>
+                           </span></small>
+                        <small class="d-block">Receiver Address: <span class="fw-bold">
+                              <?= $row['r_address'] ?>
+                           </span></small>
+                     </div>
+
+                     <div class="col-md-6 border-bottom py-2">
+                        <small class="d-block">Sender Name: <span class="fw-bold">
+                              <?= $row['s_name'] ?>
+                           </span></small>
+                        <small class="d-block">Sender Phone: <span class="fw-bold">
+                              <?= $row['s_phone'] ?>
+                           </span></small>
+                        <small class="d-block">Sender Address: <span class="fw-bold">
+                              <?= $row['s_address'] ?>
+                           </span></small>
+                     </div>
+                  </div>
+
+                  <div class="d-lg-flex flex-lg-row row  justify-content-between">
+                     <div class="col-md-6 pt-2">
+                        <small class="d-block">Package: <span class="fw-bold">
+                              <?= $row['p_name'] ?>
+                           </span></small>
+                        <small class="d-block">Package Weight(KG): <span class="fw-bold">
+                              <?= $row['p_weight'] ?>
+                           </span></small>
+                        <small class="d-block">Shipment Cost: <span class="fw-bold">$
+                              <?= number_format($row['ship_cost'], 2) ?>
+                           </span></small>
+                     </div>
+
+                     <div class="col-md-6 pt-2">
+                        <small class="d-block">Handling Charges: <span class="fw-bold">$
+                              <?= number_format($row['h_charges'], 2) ?>
+                           </span></small>
+                        <small class="d-block">Location(Origin): <span class="fw-bold">
+                              <?= $row['o_location'] ?>
+                           </span></small>
+                        <small class="d-block">Location(Destination): <span class="fw-bold">
+                              <?= $row['d_location'] ?>
+                           </span></small>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</main>
+
+<?php require './inc/footer.php'; ?>
