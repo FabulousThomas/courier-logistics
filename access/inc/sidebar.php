@@ -1,11 +1,9 @@
-<div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1"
-   id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
    <div class="offcanvas-header">
       <a href="./">
          <img src="./assets/img/logo/logo.png" width="100px" alt="LOGO">
       </a>
-      <button type="button" class="btn-close text-reset shadow-none text-white" data-bs-dismiss="offcanvas"
-         aria-label="Close"></button>
+      <button type="button" class="btn-close text-reset shadow-none text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
    </div>
    <div class="offcanvas-body">
       <ul class="">
