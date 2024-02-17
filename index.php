@@ -8,7 +8,7 @@ require './inc/navbar.php';
         <div class="container">
             <div class="col-lg-10 col-md-12">
                 <h1 class="text-white title">
-                    MaxExpress<br>Service Company
+                    <?= SITENAME ?>
                 </h1>
                 <!-- form -->
                 <form action="./track-package.php" class="search-bo" method="POST">
@@ -30,15 +30,15 @@ require './inc/navbar.php';
                 <p class="m-0">Shoot us a mail</p>
                 <div class="col-lg-5 col-md-6 black-color mb-3 d-flex align-items-center">
                     <span class="las la-envelope la-3x theme-color"></span>
-                    <h5><a href="mailto:Support@maxexpresservice.com" class="text-dark">Support@maxexpresservice.com</a></h5>
+                    <h5><a href="mailto:<?= EMAIL ?>" class="text-dark"><?= EMAIL ?></a></h5>
                 </div>
                 <div class="col-lg-4 col-md-6 black-color mb-3 d-flex align-items-center">
                     <span class="las la-clock la-3x theme-color"></span>
                     <h5 class="text-dark m-0">Mon - Sat 8.00 - 20.00</h5>
                 </div>
                 <div class="col-lg-3 col-md-6 black-color mb-3 d-flex align-items-center">
-                    <span class="las la-map la-3x theme-color"></span>
-                    <h5 class="text-dark m-0"></h5>
+                    <span class="las la-phone la-3x theme-color"></span>
+                    <h5 class="text-dark m-0"><?= PHONE ?></h5>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@ require './inc/navbar.php';
             <h6 class="theme-color">Our Services</h6>
             <h1>What We Can Do For You</h1>
             <div class="row mt-5">
-                <div class="col-lg-4 col-md-6 mb-4 card-box" data-aos="flip-right">
+                <div class="col-lg-4 col-md-6 mb-4 card-box" data-aos="flip-righ">
                     <div class="card py-5">
                         <div class="card-body">
                             <i class="las la-truck theme-color la-3x py-4"></i>
@@ -58,7 +58,7 @@ require './inc/navbar.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 card-box" data-aos="fade-down-left">
+                <div class="col-lg-4 col-md-6 mb-4 card-box" data-aos="fade-down-lef">
                     <div class="card py-5">
                         <div class="card-body">
                             <i class="las la-ship theme-color la-3x py-4"></i>
@@ -67,7 +67,7 @@ require './inc/navbar.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 card-box" data-aos="flip-left">
+                <div class="col-lg-4 col-md-6 mb-4 card-box" data-aos="flip-lef">
                     <div class="card py-5">
                         <div class="card-body">
                             <i class="las la-plane theme-color la-3x py-4"></i>
@@ -97,7 +97,7 @@ require './inc/navbar.php';
 
                     <p>Have a look at what Global Security Warhouse can offer and if you have any suggestions on our services, please don’t hesitate to let us know.</p>
 
-                    <a href="mailto:Support@maxexpresservice.com" class="btn btn-sm text-white">click to know more about us</a>
+                    <a href="mailto:<?= EMAIL ?>" class="btn btn-sm text-white">click to know more about us</a>
                 </div>
 
                 <div class="col-lg-5 col-md-12 mb-3">
